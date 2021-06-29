@@ -1,0 +1,130 @@
+/* HOME PAGE */
+
+.container .jumbotron {
+  box-shadow: 0 0 50px #3F0C1F;
+  border: 2px solid #ffbaae;
+}
+
+.slider{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+	animation: slider 16s infinite;
+}
+.face{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	overflow: hidden;
+	object-fit: cover;
+	object-position: center;
+}
+
+.face--front{ transform: translateZ(50vw); }
+.face--back{ transform: rotateY(180deg) translateZ(50vw); }
+.face--left{ transform: rotateY(-90deg) translateZ(50vw); }
+.face--right{ transform: rotateY(90deg) translateZ(50vw); }
+
+.description{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	padding: 40px 20px;
+	text-shadow: 0 0 1px rgba(103, 135, 144, 1);
+}
+	.title{
+		font-size: 24px;
+		color: white;
+		line-height: 1.6;
+	}
+	.para{
+		font-size: 12px;
+		color: white;
+	}
+
+.indicator{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 5px;
+
+	background-color: #A1D3E2;
+	z-index: 200;
+}
+	.indicator:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0%;
+		height: 5px;
+
+		background-color: #678790;
+		animation: indicator 4s infinite;
+	}
+/**/
+@keyframes slider {
+	0%, 20%{ transform: rotateY(0deg); }
+	25%, 45%{ transform: rotateY(-90deg); }
+	50%, 70%{ transform: rotateY(-180deg); }
+	75%, 95%{ transform: rotateY(-270deg); }
+	100%{ transform: rotateY(-360deg); }
+}
+@keyframes indicator {
+	0%{ width: 0%; }
+	100%{ width: 100%; }
+}
+/**/
+
+@media(min-width: 992px){
+	.placeholders{ flex-direction: row; padding: 0 30px; }
+	.placeholder{ max-width: 25%; padding: 0 10px; }
+	.slider, .face{ height: 35vmax; }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Home Page */
+  .slider {
+    max-height: 480px;
+  }
+  /* End Home Page */
+}
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Home Page */
+  .container .jumbotron {
+    background: url('../images/slide1-new.png') no-repeat;
+    height: 432px;
+    margin-top: 20px;
+  }
+  /* End Home Page */
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Home Page */
+  .container .jumbotron {
+    margin-top: 30px;
+    padding: 0;
+  }
+
+
+/*******INFO PAGE *******/
+
+
+#photo{
+  width:auto;
+  height:auto;
+}

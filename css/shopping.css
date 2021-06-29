@@ -1,0 +1,429 @@
+body {
+  font-size: 16px;
+  color: #c7c7c7;
+  background-image: linear-gradient(to left, rgba(255,0,0,0.1), rgba(255, 186, 174,1));
+  font-family: 'IM Fell Double Pica', serif;
+  margin: 0;
+}
+/************** HEADER ***************/
+#header-nav {
+  background-image: linear-gradient(to left, rgba(255,0,0,0.1), rgba(255, 186, 174,1));
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 0;
+}
+
+#logo-img{
+  background: url('../images/logo-small.png') no-repeat;
+  width: 150px;
+  height: 100px;
+  margin: 10px 15px 10px 0;
+}
+
+#nav-list a {
+  color: #de7740;
+  text-align: center;
+}
+
+.navbar-brand h1.pos_top2 {  /*online store name */
+  font-family: 'IM Fell Double Pica', serif;
+  position: relative;
+  top: -20px;
+  color: #dd554a;
+}
+.navbar-brand h2.pos_top {
+  font-family: 'IM Fell Double Pica', serif;
+  position: relative;
+  top: -70px;
+  left: 80px;
+  color: #de7740;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+.hoverable{
+  display:inline-block;
+  backface-visibility: hidden;
+  vertical-align: middle;
+  position:relative;
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  tranform: translateZ(0);
+  transition-duration: .3s;
+  transition-property:transform;
+}
+
+.hoverable:before{
+  position:absolute;
+  pointer-events: none;
+  z-index:-1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height:10px;
+  width:90%;
+  opacity:0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(222, 119, 64, 0.55) 0%, rgba(2222, 119, 64, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(222, 119, 64, 0.55) 0%, rgba(2222, 119, 64, 0) 80%);
+  /* W3C */
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.hoverable:hover, .hoverable:active, .hoverable:focus{
+  transform: translateY(-5px);
+}
+.hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before{
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+
+
+@keyframes bounce-animation {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation-name: bounce-animation;
+  animation-duration: 2s;
+}
+
+/* FOOTER */
+.panel-footer {
+  padding-bottom: 20px;
+  border-top: 0;
+}
+.panel-footer div.row {
+  margin-bottom: 10px;
+}
+#social-media, #address {
+  line-height: 2;
+}
+#social-media > span, #address > span {
+  font-size: 1.3em;
+}
+#address p {
+  color: #557c3e;
+  font-size: .8em;
+  line-height: 1.8;
+}
+#testimonials {
+  font-style: italic;
+}
+#testimonials p:nth-child(2) {
+  margin-top: 25px;
+}
+a[ui-sref="admin.auth"] {
+  color: #fff;
+}
+
+#grad {
+  background-image: linear-gradient(to right, rgba(38, 38, 38,1.0), rgba(34, 34, 34,1.0));
+}
+
+
+.waves {
+  margin: 0;
+	height: 60px;
+	width: 100%;
+  margin-bottom: -6px;
+  /*Fix for safari gap*/
+}
+/* Animation */
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 10vh;
+  }
+
+}
+
+/*Social Media Buttons */
+.svg-inline--fa {
+  vertical-align: -0.200em;
+}
+
+.rounded-social-buttons {
+  text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 5.125rem;
+  height: 5.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
+  font-size: 40px;
+}
+
+.rounded-social-buttons .social-button.facebook {
+  background: #3b5998;
+}
+
+.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+  color: #3b5998;
+  background: #fefefe;
+  border-color: #3b5998;
+}
+
+.rounded-social-buttons .social-button.twitter {
+  background: #55acee;
+}
+
+.rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+  color: #55acee;
+  background: #fefefe;
+  border-color: #55acee;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+  color: #007bb5;
+  background: #fefefe;
+  border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.youtube {
+  background: #bb0000;
+}
+
+.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+  color: #bb0000;
+  background: #fefefe;
+  border-color: #bb0000;
+}
+
+.rounded-social-buttons .social-button.instagram {
+  background: #125688;
+}
+
+.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+  color: #125688;
+  background: #fefefe;
+  border-color: #125688;
+}
+#social-media{
+  margin-bottom: 30px;
+}
+
+
+/* END FOOTER */
+
+@media (max-width: 991px) {
+
+  .navbar-brand {
+    padding-top: 10px;
+    height: 90px;
+  }
+  .navbar-brand h1 { /* Shop name */
+    position: relative;
+    top: -10px;
+    left: 20px;
+    padding-top: 10px;
+    font-size: 4.5vw; /* 1vw = 1% of viewport width */
+  }
+  .navbar-brand h2.pos_top { /* Shop name */
+    position: relative;
+    left: 70px;
+    top:-80px;
+    padding-top: 10px;
+    font-size: 2.5vw; /* 1vw = 1% of viewport width */
+  }
+  #nav-list .glyphicon {
+  font-size: 1em;
+}
+
+  #logo-img{
+    background: url('../images/logo-small.png') no-repeat;
+    width: 100px;
+    height: 75px;
+    margin: 5px 10px 5px 0;
+  }
+  /*FOOTER*/
+
+  .rounded-social-buttons .social-button {
+    width: 4.125rem;
+    height: 4.125rem;
+  }
+
+  .rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
+    font-size: 30px;
+  }
+  /* End Footer */
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 10px;
+    height: 110px;
+  }
+  .navbar-brand h1 { /* Shop name */
+    padding-top: 10px;
+    font-size: 8vw; /* 1vw = 1% of viewport width */
+    padding-left: 100px;
+  }
+  .navbar-brand h2 { /* Shop name */
+    padding-top: 10px;
+    font-size: 5vw; /* 1vw = 1% of viewport width */
+    padding-left: 100px;
+  }
+  .navbar-brand h2.pos_top{
+    font-size: 3.5vw;
+  }
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  #xs-deliver {
+    margin-top: 5px;
+    font-size: .7em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  /* End Header */
+
+  /* Footer */
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .panel-footer section:nth-child(3) {
+    margin-bottom: 0; /* margin already exists on the whole row */
+  }
+  .panel-footer section hr {
+    width: 50%;
+  }
+
+  .rounded-social-buttons .social-button {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+
+  .rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
+    font-size: 20px;
+  }
+  /* End Footer */
+}
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+  /* Header */
+  .navbar-brand h1 { /* Shop name */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 4vw;
+  }
+  .navbar-brand h2 { /* Shop name */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 3vw;
+  }
+
+  .waves {
+    height: 20px;
+    min-height: 20px;
+  }
+  .content {
+    height: 5vh;
+  }
+  /* End Header */
+
+  /*Footer*/
+  .rounded-social-buttons .social-button {
+    width: 2.825rem;
+    height: 2.825rem;
+  }
+
+  .rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
+    font-size: 15px;
+  }
+}

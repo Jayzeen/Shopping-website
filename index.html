@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIMI Online Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/shopping.css">
+    <!--<link rel="stylesheet" href="css/main.css">-->
+    <link rel="stylesheet" href="css/common.css">
+  </head>
+
+<body ng-app="shopping" ng-strict-di>
+
+    <!-- Fixed position loading indicator -->
+    <loading class="loading-indicator"></loading>
+
+    <!-- Header -->
+    <header>
+        <nav id="header-nav" class="navbar navbar-default">
+              <div class="container">
+                <div class="navbar-header">
+                  <a href="index.html" class="pull-left visible-md visible-lg">
+                    <div id="logo-img" alt="Logo image"></div>
+                  </a>
+
+                  <div class="navbar-brand animated bounce slow infinite">
+                    <a href="index.html"><h1 class="pos_top2">Online</h1>
+                    <br><h2 class="pos_top">Store</h2></a>
+                  </div>
+
+                  <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+
+                <div id="collapsable-nav" class="collapse navbar-collapse">
+                  <ul id="nav-list" class="nav navbar-nav navbar-right ">
+                    <li id="navHomeButton">
+                        <a href="index.html" class="hoverable" class="visible-xs">
+                        <span class="glyphicon glyphicon-home"></span><br class="hidden-xs"> HOME</a>
+                    </li>
+                    <li>
+                      <a class="hoverable" >
+                        <span class="glyphicon glyphicon-shopping-cart"></span><br class="hidden-xs"> PRODUCTS</a>
+                    </li>
+                    <li>
+                      <a ui-sref="public.about" class="hoverable">
+                        <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> ABOUT</a>
+                    </li>
+                    <li>
+                      <a class="hoverable">
+                        <span class="glyphicon glyphicon-phone"></span><br class="hidden-xs"> CONTACT</a>
+                    </li><li>
+                      <a class="hoverable">
+                        <span class="glyphicon glyphicon-usd"></span><br class="hidden-xs"> PROMOTIONS</a>
+                    </li>
+                  </ul>
+                </div>
+
+
+              </div>
+         </nav>
+    </header>
+
+    <ui-view>
+      <div class="text-center initial-loading">
+        <h2>Loading Site...</h2>
+      </div>
+    </ui-view>
+
+
+      <!--Footer-->
+      <!--Waves Container-->
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 25 150 10"
+         preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+            <use xlink:href="#gentle-wave" x="18" y="0" fill="rgba(221, 85, 74,0.5)" />
+            <use xlink:href="#gentle-wave" x="18" y="3" fill="rgba(221, 85, 74,0.7)" />
+            <use xlink:href="#gentle-wave" x="18" y="5" fill="rgba(221, 85, 74,0.9)" />
+        </g>
+    </svg>
+  <!--Waves end-->
+        <footer id="grad" class="panel-footer">
+          <div class="container">
+            <div class="row">
+              <section id="social-media" class="col-sm-12">
+                <div class="rounded-social-buttons">
+                    <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+              </section>
+              <section id="address" class="col-sm-6">
+                <span>Address:</span><br>
+                7105 Reisterstown Road<br>
+                Baltimore, MD 21215
+                <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
+                <hr class="visible-xs">
+              </section>
+              <section id="testimonials" class="col-sm-6">
+                <p>"The best Online Shopping store I've used! And that's saying a lot, since I've used many!"</p>
+                <p>"Beautiful Clothes! Quick Delivery! Couldn't ask for a better place to buy clothes!"</p>
+              </section>
+            </div>
+            <div class="text-center">
+              &copy; Copyright SIMI 2020 |
+          </div>
+        </footer>
+
+      <!-- Libs -->
+      <script src="lib/jquery-2.1.4.min.js"></script>
+      <script src="lib/bootstrap.min.js"></script>
+      <script src="lib/angular.min.js"></script>
+      <script src="lib/angular-ui-router.min.js"></script>
+
+      <!-- Main Shopping Module -->
+      <script src="src/shopping.module.js"></script>
+      <script src="src/script.js"></script>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+      integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+      crossorigin="anonymous"></script>
+
+      <!-- Common Module -->
+      <script src="src/common/common.module.js"></script>
+      <script src="src/common/loading/loading.component.js"></script>
+      <script src="src/common/loading/loading.interceptor.js"></script>
+
+      <!-- Public Module -->
+      <script src="src/public/public.module.js"></script>
+      <script src="src/public/public.routes.js"></script>
+</body>
+</html>
